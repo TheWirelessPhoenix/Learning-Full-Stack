@@ -3,44 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My First Webpage</title>
-    <style>
-      img {
-        width: 405px;
-        border-radius: 10px;
-      }
-      h1.titles {
-        font-weight: bold;
-      }
-      h2.cool {
-        font-style: italic;
-      }
-      p.Description {
-        font-style: italic;
-      }
-    </style>
+    <title>Shrek - The Ogre, The Myth, The Legend</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
+  <audio
+    id="RoarSound"
+    src="https://www.myinstants.com/media/sounds/shreks-beastly-roar.mp3"
+    preload="auto"
+  ></audio>
   <body>
-    <!--Intricate title about Shrek + going on and on about how good he is.-->
-    <h1 class="titles">My Epic Shrek</h1>
-    <h2 class="cool">Shrek is awesome.</h2>
+    <div class="container">
+      <h1 class="titles">🧅 My Epic Shrek 🧅</h1>
+      <h2 class="cool">
+        Shrek is love. Shrek is life. Shrek is
+        <span id="adjective">layers</span>.
+      </h2>
 
-    <p>Yaaayyyyyyyyy!!! Shrek!</p>
-    <br />
-    <img
-      src="https://tse2.mm.bing.net/th/id/OIP.H88aKb7tUCF3XycKwqHjFgHaEK?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
-      alt="Shrek"
-    />
-    <br />
-    <br />
-    <p class="Description">
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-      architecto asperiores eum odio, illo ducimus optio assumenda autem enim
-      officiis aliquam cupiditate commodi labore repudiandae sapiente similique
-      mollitia? Accusamus, accusantium. Lorem ipsum dolor, sit amet consectetur
-      adipisicing elit. Voluptate dignissimos quibusdam molestiae praesentium,
-      sapiente autem adipisci aliquid totam, nesciunt ab quaerat nisi quo quis
-      harum odio molestias pariatur, officiis vero."
-    </p>
+      <div class="shrek-facts">
+        <p class="shrek-greeting" id="greeting">
+          "WHAT ARE YOU DOING IN MY SWAMP?!"
+        </p>
+        <button class="swamp-btn" id="swampBtn">🔊 Hear Shrek Roar</button>
+      </div>
+
+      <img
+        class="imageofshrek"
+        id="shrekImg"
+        src="https://tse2.mm.bing.net/th/id/OIP.H88aKb7tUCF3XycKwqHjFgHaEK?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="Shrek"
+      />
+
+      <div class="interactive-controls">
+        <button class="action-btn" id="spinBtn">🔄 Spin Shrek</button>
+        <button class="action-btn" id="rainbowBtn">🌈 Rainbow Shrek</button>
+        <button class="action-btn" id="resetBtn">⏪ Reset Shrek</button>
+      </div>
+
+      <p class="Description" id="description">
+        Behold! <strong>Shrek</strong> — a magnificent, swamp-dwelling ogre with
+        the emotional depth of an onion and the personal hygiene of a garbage
+        truck. He lives in a swamp, eats rats for breakfast, and has a talking
+        donkey as his best friend (which says more about him than he'd like to
+        admit). Despite smelling like a bog and scaring villagers for sport,
+        Shrek has somehow managed to find true love, become a father, and save
+        the kingdom of Far Far Away — all while wearing the same tunic for what
+        appears to be several decades. He's proof that with enough confidence
+        (and a Scottish accent), even a flatulent ogre can become a hero. In
+        short:
+        <em>Shrek is love. Shrek is life. Shrek is an absolute icon.</em>
+      </p>
+
+      <div class="counter-section">
+        <p>
+          Times you've appreciated Shrek's greatness:
+          <span id="clickCount">0</span>
+        </p>
+        <button class="action-btn" id="appreciateBtn">
+          👍 Appreciate Shrek
+        </button>
+      </div>
+
+      <div class="fun-quote" id="quoteBox">
+        <p id="quoteText">"Ogres are like onions. We have layers."</p>
+      </div>
+      <button class="swamp-btn" id="newQuoteBtn">💬 New Shrek Quote</button>
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #1a3a1a 0%,
+    #2d5a2d 30%,
+    #3a2a1a 70%,
+    #1a1a0a 100%
+  );
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: linear-gradient(
+    180deg,
+    #4a3a2a 0%,
+    #5a4a3a 20%,
+    #3a5a3a 40%,
+    #2a4a2a 60%,
+    #3a2a1a 80%,
+    #2a1a0a 100%
+  );
+  border: 4px solid #6b5a3a;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.7),
+    inset 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swamp bubble effect */
+.container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 30% 40%,
+    rgba(100, 200, 100, 0.05) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  animation: swampGlow 6s ease-in-out infinite;
+}
+
+@keyframes swampGlow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+}
+
+h1.titles {
+  font-family: "Creepster", cursive;
+  font-size: 3rem;
+  color: #8fbc8f;
+  text-shadow:
+    3px 3px 0 #2a4a2a,
+    6px 6px 0 #1a3a1a,
+    0 0 20px rgba(143, 188, 143, 0.5);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+h2.cool {
+  font-family: "Creepster", cursive;
+  font-size: 1.5rem;
+  color: #c4a882;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #3a2a1a;
+  position: relative;
+  z-index: 1;
+}
+
+#adjective {
+  color: #7ccd7c;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+img.imageofshrek {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 15px;
+  border: 3px solid #6b5a3a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+img.imageofshrek:hover {
+  transform: scale(1.03);
+  border-color: #8fbc8f;
+}
+
+/* Spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Rainbow filter */
+img.rainbow {
+  animation: rainbowFilter 0.5s linear infinite;
+}
+
+@keyframes rainbowFilter {
+  0% {
+    filter: hue-rotate(0deg) saturate(2);
+  }
+  25% {
+    filter: hue-rotate(90deg) saturate(2);
+  }
+  50% {
+    filter: hue-rotate(180deg) saturate(2);
+  }
+  75% {
+    filter: hue-rotate(270deg) saturate(2);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(2);
+  }
+}
+
+p.Description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d4c4a8;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #8fbc8f;
+  margin: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+p.Description strong {
+  color: #7ccd7c;
+  font-weight: 700;
+}
+
+p.Description em {
+  color: #c4a882;
+  font-style: italic;
+}
+
+/* Shrek greeting */
+.shrek-greeting {
+  font-family: "Creepster", cursive;
+  font-size: 1.8rem;
+  color: #7ccd7c;
+  text-shadow:
+    2px 2px 0 #1a3a1a,
+    0 0 15px rgba(124, 205, 124, 0.4);
+  margin: 15px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.shrek-greeting.roar {
+  animation: roarEffect 0.5s ease;
+  color: #ff6b6b;
+  text-shadow:
+    2px 2px 0 #4a0000,
+    0 0 30px rgba(255, 107, 107, 0.6);
+  transform: scale(1.2);
+}
+
+@keyframes roarEffect {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3) rotate(-3deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Buttons */
+.swamp-btn,
+.action-btn {
+  font-family: "Creepster", cursive;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid #6b5a3a;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.swamp-btn {
+  background: linear-gradient(180deg, #5a7a5a, #3a5a3a);
+  color: #e0d4c0;
+  text-shadow: 1px 1px 0 #1a3a1a;
+  box-shadow: 0 4px 0 #2a4a2a;
+}
+
+.swamp-btn:hover {
+  background: linear-gradient(180deg, #6a8a6a, #4a6a4a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #2a4a2a;
+}
+
+.swamp-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #2a4a2a;
+}
+
+.action-btn {
+  background: linear-gradient(180deg, #6a5a4a, #4a3a2a);
+  color: #e0d4c0;
+  text-shadow: 1px 1px 0 #2a1a0a;
+  box-shadow: 0 4px 0 #3a2a1a;
+}
+
+.action-btn:hover {
+  background: linear-gradient(180deg, #7a6a5a, #5a4a3a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #3a2a1a;
+}
+
+.action-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #3a2a1a;
+}
+
+/* Interactive controls */
+.interactive-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Counter section */
+.counter-section {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.counter-section p {
+  color: #d4c4a8;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+#clickCount {
+  font-family: "Creepster", cursive;
+  font-size: 1.5rem;
+  color: #7ccd7c;
+  text-shadow: 0 0 10px rgba(124, 205, 124, 0.5);
+}
+
+/* Quote box */
+.fun-quote {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0 10px;
+  border: 2px dashed #6b5a3a;
+  position: relative;
+  z-index: 1;
+}
+
+#quoteText {
+  font-family: "Creepster", cursive;
+  font-size: 1.3rem;
+  color: #c4a882;
+  text-shadow: 1px 1px 0 #2a1a0a;
+  transition: all 0.3s ease;
+}
+
+/* Shrek facts section */
+.shrek-facts {
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  h1.titles {
+    font-size: 2rem;
+  }
+
+  h2.cool {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .interactive-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swamp-btn,
+  .action-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
